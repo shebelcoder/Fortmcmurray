@@ -47,12 +47,18 @@
     	 <a href="#"><img src="img/my.png" style="height: 20px, width: 10px " /></a>
     </div>
    
+<section class="banner-area relative" id="home">
+    <div class="overlay overlay-bg"></div>
+    <div style="">
+        <a href="#"><img src="img/my.png" style="height: 20px; width: 10px;" /></a>
+    </div>
+
     <div class="container">
         <div class="row fullscreen d-flex align-items-center justify-content-between">
             <div class="banner-content col-lg-6 col-md-6">
                 <h6 class="text-white">Reliable Taxi Services in Fort McMurray, Just Call</h6>
                 <h1 class="text-uppercase">
-               			+1 587 645 7951
+                    +1 587 645 7951
                 </h1>
                 <p class="pt-10 pb-10 text-white">
                     Experience safe, affordable, and timely rides with Arrow Cab. Book your ride now and enjoy the comfort and convenience.
@@ -61,42 +67,60 @@
             </div>
             <div class="col-lg-4 col-md-6 header-right">
                 <h4 class="pb-30">Book Your Taxi Online!</h4>
-                <form class="form">
-                    <div class="from-group">
-                        <input class="form-control txt-field" type="text" name="name" placeholder="Your Name">
-                        <input class="form-control txt-field" type="email" name="email" placeholder="Email Address">
-                        <input class="form-control txt-field" type="tel" name="phone" placeholder="Phone Number">
+                <form action="mailto:Arrowcab10@gmail.com" method="post" enctype="text/plain">
+                    <div class="form-group">
+                        <input class="form-control txt-field" type="text" name="name" placeholder="Your Name" required>
+                        <input class="form-control txt-field" type="email" name="email" placeholder="Email Address" required>
+                        <input class="form-control txt-field" type="tel" name="phone" placeholder="Phone Number" required>
                     </div>
                     <div class="form-group">
-                        <div class="default-select" id="default-select">
-                            <select>
-                                <option value="" disabled selected hidden>From Location</option>
-                                <option value="1">Downtown</option>
-                                <option value="2">Airport</option>
-                                <option value="3">Neighborhoods</option>
-                            </select>
-                        </div>
+                        <label for="from-location" class="text-white">From Location:</label>
+                        <select class="form-control" name="from-location" id="from-location" required>
+                            <option value="" disabled selected hidden>Select From Location</option>
+                            <option value="Abasand">Abasand</option>
+                            <option value="Beacon Hill">Beacon Hill</option>
+                            <option value="Dickinsfield">Dickinsfield</option>
+                            <option value="Eagle Ridge">Eagle Ridge</option>
+                            <option value="Gregoire">Gregoire</option>
+                            <option value="Lower Townsite (Downtown)">Lower Townsite (Downtown)</option>
+                            <option value="Parsons Creek">Parsons Creek</option>
+                            <option value="Stone Creek">Stone Creek</option>
+                            <option value="Thickwood">Thickwood</option>
+                            <option value="Timberlea">Timberlea</option>
+                            <option value="Waterways">Waterways</option>
+                            <option value="Kearl Oil Sands Camp">Kearl Oil Sands Camp</option>
+                            <option value="Suncor Firebag Camp">Suncor Firebag Camp</option>
+                            <option value="Suncor Fort Hills Camp">Suncor Fort Hills Camp</option>
+                            <option value="Long distance">Long distance</option>
+                        </select>
                     </div>
                     <div class="form-group">
-                        <div class="default-select" id="default-select2">
-                            <select>
-                                <option value="" disabled selected hidden>To Destination</option>
-                                <option value="1">Downtown</option>
-                                <option value="2">Airport</option>
-                                <option value="3">Neighborhoods</option>
-                            </select>
-                        </div>
+                        <label for="to-destination" class="text-white">To Destination:</label>
+                        <select class="form-control" name="to-destination" id="to-destination" required>
+                            <option value="" disabled selected hidden>Select To Destination</option>
+                            <option value="Abasand">Abasand</option>
+                            <option value="Beacon Hill">Beacon Hill</option>
+                            <option value="Dickinsfield">Dickinsfield</option>
+                            <option value="Eagle Ridge">Eagle Ridge</option>
+                            <option value="Gregoire">Gregoire</option>
+                            <option value="Lower Townsite (Downtown)">Lower Townsite (Downtown)</option>
+                            <option value="Parsons Creek">Parsons Creek</option>
+                            <option value="Stone Creek">Stone Creek</option>
+                            <option value="Thickwood">Thickwood</option>
+                            <option value="Timberlea">Timberlea</option>
+                            <option value="Waterways">Waterways</option>
+                            <option value="Kearl Oil Sands Camp">Kearl Oil Sands Camp</option>
+                            <option value="Suncor Firebag Camp">Suncor Firebag Camp</option>
+                            <option value="Suncor Fort Hills Camp">Suncor Fort Hills Camp</option>
+                            <option value="Long distance">Long distance</option>
+                        </select>
                     </div>
                     <div class="form-group">
-                        <div class="input-group dates-wrap">
-                            <input id="datepicker2" class="dates form-control" placeholder="Date & Time" type="text">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"><span class="lnr lnr-calendar-full"></span></span>
-                            </div>
-                        </div>
+                        <label for="date-time" class="text-white">Date & Time:</label>
+                        <input id="date-time" class="form-control" type="datetime-local" name="date-time" required>
                     </div>
                     <div class="form-group">
-                        <button class="btn btn-default btn-lg btn-block text-center text-uppercase">Make Reservation</button>
+                        <button class="btn btn-default btn-lg btn-block text-center text-uppercase" type="submit">Send Reservation</button>
                     </div>
                 </form>
             </div>
@@ -104,7 +128,7 @@
     </div>
 </section>
 
-<section class="home-about-area section-gap">
+    <section class="home-about-area section-gap">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6 about-left">
