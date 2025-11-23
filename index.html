@@ -1,424 +1,862 @@
-	<!DOCTYPE html>
-	<html lang="zxx" class="no-js">
-	<head>
-		<!-- Mobile Specific Meta -->
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<!-- Favicon-->
-		<link rel="shortcut icon" href="img/fav.png">
-		<!-- Author Meta -->
-		<meta name="author" content="colorlib">
-		<!-- Meta Description -->
-		<meta name="description" content="">
-		<!-- Meta Keyword -->
-		<meta name="keywords" content="">
-		<!-- meta character set -->
-		<meta charset="UTF-8">
-		<!-- Site Title -->
-		<title>Arrow Cab | Fort McMurray Taxi Service</title>
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="author" content="Arrow Cab">
+	<meta name="description" content="Professional taxi service in Fort McMurray with province-wide coverage across Alberta. Book online for reliable transportation.">
+	<meta name="keywords" content="taxi, Fort McMurray, Calgary, Edmonton, Alberta, transportation, booking">
 
-		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
-			<!--
-			CSS
-			============================================= -->
-			<link rel="stylesheet" href="css/linearicons.css">
-			<link rel="stylesheet" href="css/font-awesome.min.css">
-			<link rel="stylesheet" href="css/bootstrap.css">
-			<link rel="stylesheet" href="css/magnific-popup.css">
-			<link rel="stylesheet" href="css/nice-select.css">							
-			<link rel="stylesheet" href="css/animate.min.css">
-			<link rel="stylesheet" href="css/jquery-ui.css">			
-			<link rel="stylesheet" href="css/main.css">
-		</head>
-		<body>	
-			  <header id="header">
-		  		<div class="header-top">
+	<title>Arrow Cab | Premium Taxi Service Across Alberta</title>
+
+	<link rel="shortcut icon" href="img/fav.png">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/linearicons.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<link rel="stylesheet" href="css/nice-select.css">
+	<link rel="stylesheet" href="css/animate.min.css">
+	<link rel="stylesheet" href="css/jquery-ui.css">
+	<link rel="stylesheet" href="css/main.css">
+
+	<style>
+		/* Modern Minimalist Enhancements */
+		:root {
+			--primary-color: #2563eb;
+			--primary-dark: #1e40af;
+			--accent-color: #3b82f6;
+			--success-color: #10b981;
+			--text-dark: #1f2937;
+			--text-light: #6b7280;
+			--bg-light: #f9fafb;
+			--border-color: #e5e7eb;
+			--shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+			--shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+			--shadow-lg: 0 10px 25px rgba(0,0,0,0.15);
+			--shadow-xl: 0 20px 40px rgba(0,0,0,0.2);
+		}
+
+		* {
+			font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+		}
+
+		h1, h2, h3, h4 {
+			font-family: 'Poppins', sans-serif;
+		}
+
+		/* Glass-morphism effect */
+		.glass {
+			background: rgba(255, 255, 255, 0.95);
+			backdrop-filter: blur(10px);
+			border: 1px solid rgba(255, 255, 255, 0.2);
+			box-shadow: var(--shadow-xl);
+		}
+
+		/* Modern Header */
+		#header {
+			background: rgba(255, 255, 255, 0.98);
+			backdrop-filter: blur(10px);
+			box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+			transition: all 0.3s ease;
+		}
+
+		#header.header-scrolled {
+			box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+		}
+
+		.main-menu a {
+			font-weight: 500;
+			transition: color 0.3s ease;
+		}
+
+		/* Hero Section */
+		.banner-area {
+			background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+			min-height: 100vh;
+			position: relative;
+			overflow: hidden;
+		}
+
+		.banner-area::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="2" fill="white" opacity="0.1"/></svg>') repeat;
+			animation: float 20s linear infinite;
+		}
+
+		@keyframes float {
+			from { transform: translateY(0); }
+			to { transform: translateY(-100px); }
+		}
+
+		.banner-content h6 {
+			font-size: 16px;
+			font-weight: 500;
+			letter-spacing: 2px;
+			text-transform: uppercase;
+			opacity: 0.95;
+		}
+
+		.banner-content h1 {
+			font-size: 72px;
+			font-weight: 700;
+			line-height: 1.1;
+			margin: 20px 0;
+			text-shadow: 0 2px 10px rgba(0,0,0,0.1);
+		}
+
+		/* Booking Card */
+		.booking-card {
+			background: white;
+			border-radius: 24px;
+			padding: 40px;
+			box-shadow: var(--shadow-xl);
+			transform: translateY(0);
+			transition: all 0.3s ease;
+		}
+
+		.booking-card:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 25px 50px rgba(0,0,0,0.25);
+		}
+
+		.booking-card h4 {
+			font-size: 24px;
+			font-weight: 700;
+			color: var(--text-dark);
+			margin-bottom: 30px;
+		}
+
+		.form-control, .nice-select {
+			border: 2px solid var(--border-color);
+			border-radius: 12px;
+			padding: 14px 18px;
+			font-size: 15px;
+			transition: all 0.3s ease;
+			background: var(--bg-light);
+		}
+
+		.form-control:focus {
+			border-color: var(--primary-color);
+			background: white;
+			box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+			outline: none;
+		}
+
+		.btn-primary {
+			background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+			border: none;
+			border-radius: 12px;
+			padding: 16px 32px;
+			font-weight: 600;
+			font-size: 16px;
+			text-transform: none;
+			box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+			transition: all 0.3s ease;
+		}
+
+		.btn-primary:hover {
+			transform: translateY(-2px);
+			box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
+		}
+
+		/* Price Display */
+		.price-estimate {
+			background: linear-gradient(135deg, #10b981, #059669);
+			color: white;
+			padding: 20px;
+			border-radius: 12px;
+			margin-top: 20px;
+			display: none;
+			animation: slideDown 0.3s ease;
+		}
+
+		@keyframes slideDown {
+			from {
+				opacity: 0;
+				transform: translateY(-10px);
+			}
+			to {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+
+		.price-estimate h5 {
+			margin: 0;
+			font-size: 18px;
+			font-weight: 600;
+		}
+
+		.price-amount {
+			font-size: 32px;
+			font-weight: 700;
+			margin-top: 10px;
+		}
+
+		/* Feature Cards */
+		.feature-card {
+			background: white;
+			border-radius: 16px;
+			padding: 40px 30px;
+			text-align: center;
+			box-shadow: var(--shadow-md);
+			transition: all 0.3s ease;
+			border: 1px solid var(--border-color);
+		}
+
+		.feature-card:hover {
+			transform: translateY(-10px);
+			box-shadow: var(--shadow-lg);
+			border-color: var(--primary-color);
+		}
+
+		.feature-card .icon {
+			width: 80px;
+			height: 80px;
+			margin: 0 auto 24px;
+			background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+			border-radius: 20px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 36px;
+			color: white;
+		}
+
+		/* Section Styling */
+		section {
+			padding: 100px 0;
+		}
+
+		.section-title h1 {
+			font-size: 48px;
+			font-weight: 700;
+			color: var(--text-dark);
+			margin-bottom: 16px;
+		}
+
+		.section-title p {
+			font-size: 18px;
+			color: var(--text-light);
+			max-width: 600px;
+			margin: 0 auto;
+		}
+
+		/* Destination Grid */
+		.destination-card {
+			position: relative;
+			border-radius: 16px;
+			overflow: hidden;
+			height: 300px;
+			cursor: pointer;
+			transition: all 0.3s ease;
+		}
+
+		.destination-card::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.8));
+			z-index: 1;
+		}
+
+		.destination-card:hover {
+			transform: scale(1.05);
+		}
+
+		.destination-card img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		.destination-info {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			padding: 30px;
+			z-index: 2;
+			color: white;
+		}
+
+		.destination-info h3 {
+			font-size: 28px;
+			font-weight: 700;
+			margin-bottom: 8px;
+		}
+
+		.destination-info p {
+			font-size: 14px;
+			opacity: 0.9;
+		}
+
+		/* Fleet Showcase */
+		.fleet-card {
+			background: white;
+			border-radius: 16px;
+			overflow: hidden;
+			box-shadow: var(--shadow-md);
+			transition: all 0.3s ease;
+		}
+
+		.fleet-card:hover {
+			transform: translateY(-8px);
+			box-shadow: var(--shadow-lg);
+		}
+
+		.fleet-card img {
+			width: 100%;
+			height: 250px;
+			object-fit: cover;
+		}
+
+		.fleet-info {
+			padding: 30px;
+		}
+
+		.fleet-info h4 {
+			font-size: 22px;
+			font-weight: 700;
+			margin-bottom: 12px;
+		}
+
+		.fleet-features {
+			display: flex;
+			gap: 15px;
+			margin-top: 20px;
+			flex-wrap: wrap;
+		}
+
+		.fleet-feature {
+			background: var(--bg-light);
+			padding: 6px 12px;
+			border-radius: 8px;
+			font-size: 13px;
+			color: var(--text-dark);
+			font-weight: 500;
+		}
+
+		/* Stats Section */
+		.stats-section {
+			background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+			color: white;
+			padding: 80px 0;
+		}
+
+		.stat-item {
+			text-align: center;
+		}
+
+		.stat-number {
+			font-size: 56px;
+			font-weight: 700;
+			margin-bottom: 10px;
+		}
+
+		.stat-label {
+			font-size: 18px;
+			opacity: 0.9;
+		}
+
+		/* Responsive */
+		@media (max-width: 768px) {
+			.banner-content h1 {
+				font-size: 42px;
+			}
+
+			.booking-card {
+				padding: 30px 20px;
+			}
+
+			.section-title h1 {
+				font-size: 36px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<header id="header">
+		<div class="container main-menu">
+			<div class="row align-items-center justify-content-between d-flex">
+				<a href="index.html"><img src="img/logo.png" alt="Arrow Cab" title="Arrow Cab" /></a>
+				<nav id="nav-menu-container">
+					<ul class="nav-menu">
+						<li class="menu-active"><a href="index.html">Home</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="service.html">Services</a></li>
+						<li><a href="gallery.html">Gallery</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
+
+	<!-- Hero Banner -->
+	<section class="banner-area relative" id="home">
+		<div class="overlay overlay-bg"></div>
+		<div class="container">
+			<div class="row fullscreen d-flex align-items-center justify-content-between">
+				<div class="banner-content col-lg-6 col-md-12">
+					<h6 class="text-white">Premium Transportation Across Alberta</h6>
+					<h1 class="text-white">
+						Your Journey,<br>Our Priority
+					</h1>
+					<p class="pt-10 pb-10 text-white" style="font-size: 18px; line-height: 1.6;">
+						Experience professional taxi service from Fort McMurray to anywhere in Alberta.
+						Calgary, Edmonton, Brooks, and beyond - we've got you covered.
+					</p>
+					<a href="tel:+15876457951" class="btn btn-primary btn-lg">
+						<i class="fa fa-phone"></i> Call +1 587 645 7951
+					</a>
 				</div>
-			    <div class="container main-menu">
-			    	<div class="row align-items-center justify-content-between d-flex">
-			    		<a href="index.html"><img src="img/logo.png" alt="" title="" /></a>		
-						<nav id="nav-menu-container">
-							<ul class="nav-menu">
-							  <li class="menu-active"><a href="index.html">Home</a></li>
-							  <li><a href="about.html">About</a></li>
-							  <li><a href="service.html">Services</a></li>
-							  <li><a href="gallery.html">Gallery</a></li>
-							  </li>						  			          	          
-							  <li><a href="contact.html">Contact</a></li>
-							</ul>
-						</nav><!-- #nav-menu-container -->		
-			    	</div>
-			    </div>
-			  </header><!-- #header -->
 
-			<!-- start banner Area -->
-			<section class="banner-area relative" id="home">
-				<div class="overlay overlay-bg"></div>	
-				<div class="container">
-        <div class="row fullscreen d-flex align-items-center justify-content-between">
-            <div class="banner-content col-lg-6 col-md-6">
-                <h6 class="text-white">Reliable Taxi Services in Fort McMurray, Just Call</h6>
-                <h1 class="text-uppercase">
-                    +1 587 645 7951
-                </h1>
-                <p class="pt-10 pb-10 text-white">
-                    Experience safe, affordable, and timely rides with Arrow Cab. Book your ride now and enjoy the comfort and convenience.
-                </p>
-                <a href="tel:+15876457951" class="primary-btn text-uppercase">Call for Taxi</a>
-            </div>
-            <div class="col-lg-4 col-md-6 header-right">
-                <h4 class="pb-30">Book Your Taxi Online!</h4>
-                <form action="https://formsubmit.co/arrowcab10@gmail.com?return=https://arrowcab.ca" method="POST">
-                    <div class="form-group">
-                        <input class="form-control txt-field" type="text" name="name" placeholder="Your Name" required>
-                        <input class="form-control txt-field" type="email" name="email" placeholder="Email Address" required>
-                        <input class="form-control txt-field" type="tel" name="phone" placeholder="Phone Number" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="from-location">From Location:</label>
-                        <select class="form-control" name="from-location" id="from-location" required>
-                            <option value="" disabled selected hidden>Select From Location</option>
-                            <option value="Abasand">Abasand</option>
-                            <option value="Beacon Hill">Beacon Hill</option>
-                            <option value="Dickinsfield">Dickinsfield</option>
-                            <option value="Eagle Ridge">Eagle Ridge</option>
-                            <option value="Gregoire">Gregoire</option>
-                            <option value="Lower Townsite (Downtown)">Lower Townsite (Downtown)</option>
-                            <option value="Parsons Creek">Parsons Creek</option>
-                            <option value="Stone Creek">Stone Creek</option>
-                            <option value="Thickwood">Thickwood</option>
-                            <option value="Timberlea">Timberlea</option>
-                            <option value="Waterways">Waterways</option>
-                            <option value="Kearl Oil Sands Camp">Kearl Oil Sands Camp</option>
-                            <option value="Suncor Firebag Camp">Suncor Firebag Camp</option>
-                            <option value="Suncor Fort Hills Camp">Suncor Fort Hills Camp</option>
-                            <option value="Long distance">Long distance</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="to-destination">To Destination:</label>
-                        <select class="form-control" name="to-destination" id="to-destination" required>
-                            <option value="" disabled selected hidden>Select To Destination</option>
-                            <option value="Abasand">Abasand</option>
-                            <option value="Beacon Hill">Beacon Hill</option>
-                            <option value="Dickinsfield">Dickinsfield</option>
-                            <option value="Eagle Ridge">Eagle Ridge</option>
-                            <option value="Gregoire">Gregoire</option>
-                            <option value="Lower Townsite (Downtown)">Lower Townsite (Downtown)</option>
-                            <option value="Parsons Creek">Parsons Creek</option>
-                            <option value="Stone Creek">Stone Creek</option>
-                            <option value="Thickwood">Thickwood</option>
-                            <option value="Timberlea">Timberlea</option>
-                            <option value="Waterways">Waterways</option>
-                            <option value="Kearl Oil Sands Camp">Kearl Oil Sands Camp</option>
-                            <option value="Suncor Firebag Camp">Suncor Firebag Camp</option>
-                            <option value="Suncor Fort Hills Camp">Suncor Fort Hills Camp</option>
-                            <option value="Long distance">Long distance</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="date-time">Date & Time:</label>
-                        <input id="date-time" class="form-control" type="datetime-local" name="date-time" optional>
-                        <div class="form-group">
-        <input class="form-control txt-field" type="text" name="message" placeholder="Message (Optional)">
-    </div>
-                        <input type="hidden" name="_template" value="box">
-                    </div>
-                    <div class="form-group">
-                        
-                        <button class="btn btn-default btn-lg btn-block text-center text-uppercase" type="submit">Send Reservation</button>
-                        
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>					
-			</section>
-			<!-- End banner Area -->	
+				<div class="col-lg-5 col-md-12">
+					<div class="booking-card">
+						<h4><i class="fa fa-calendar-check-o"></i> Book Your Ride</h4>
+						<form id="bookingForm">
+							<div class="form-group">
+								<label style="font-weight: 600; margin-bottom: 8px; color: var(--text-dark);">Your Name</label>
+								<input class="form-control" type="text" id="customerName" placeholder="Enter your name" required>
+							</div>
 
-			<!-- Start home-about Area -->
-			<section class="home-about-area section-gap">
-				<div class="container">
-					<div class="row align-items-center">
-						<div class="col-lg-6 about-left">
-							<img class="img-fluid" src="img/about-img.jpg" alt="">
-						</div>
-						<div class="col-lg-6 about-right">
-							<h1>Globally Connected
-							by Large Network</h1>
-							<h4>We are here to listen from you deliver exellence</h4>
-							<h1>At ArrowCab, we take pride in delivering clean, fast, and courteous rides, all at the most affordable rates for our valued customers								
-							</h1>
-							<a class="text-uppercase primary-btn" href="#">Get Details</a>
-						</div>
-					</div>
-				</div>	
-			</section>
-			<!-- End home-about Area -->
-			
-			<!-- Start services Area -->
-			<section class="services-area pb-120">
-				<div class="container">
-					<div class="row section-title">
-						<h1>What Services we offer to our clients</h1>
-						<p>At ArrowCab, we are passionate about providing eco-friendly transportation solutions that our clients love.</p>
-					</div>
-					<div class="row">
-						<div class="col-lg-4 single-service">
-							<span class="lnr lnr-car"></span>
-							<a href="#"><h4>Taxi Service</h4></a>
-							<p>
-								Dependable and clean rides to get you to your destination swiftly and safely.
-							</p>
-						</div>
-						<div class="col-lg-4 single-service">
-							<span class="lnr lnr-briefcase"></span>
-							<a href="#"><h4>Office Pick-ups</h4></a>
-							<p>
-								Reliable corporate transportation tailored for your professional needs.
-							</p>
-						</div>
-						<div class="col-lg-4 single-service">
-							<span class="lnr lnr-bus"></span>
-							<a href="#"><h4>Event Transportation</h4></a>
-							<p>
-								Seamless travel solutions to ensure you arrive on time and stress-free for your special events.
-							</p>
-						</div>												
-					</div>	
-				</div>	
-			</section>
-			<!-- End services Area -->
-			
-			<!-- Start image-gallery Area -->
-			<section class="image-gallery-area section-gap">
-				<div class="container">
-					<div class="row section-title">
-						<h1>Image Gallery that we like to share</h1>
-						<p>Who are in extremely love with eco friendly system.</p>
-					</div>					
-					<div class="row">
-						<div class="col-lg-4 single-gallery">
-							<a href="img/g1.jpg" class="img-gal"><img class="img-fluid" src="img/g1.jpg" alt=""></a>
-							<a href="img/g4.jpg" class="img-gal"><img class="img-fluid" src="img/g4.jpg" alt=""></a>
-						</div>	
-						<div class="col-lg-4 single-gallery">
-							<a href="img/g2.jpg" class="img-gal"><img class="img-fluid" src="img/g2.jpg" alt=""></a>
-							<a href="img/g5.jpg" class="img-gal"><img class="img-fluid" src="img/g5.jpg" alt=""></a>						
-						</div>	
-						<div class="col-lg-4 single-gallery">
-							<a href="img/g3.jpg" class="img-gal"><img class="img-fluid" src="img/g3.jpg" alt=""></a>
-							<a href="img/g6.jpg" class="img-gal"><img class="img-fluid" src="img/g6.jpg" alt=""></a>
-						</div>				
-					</div>
-				</div>	
-			</section>
-			<!-- End image-gallery Area -->
-			
-			<!-- Start reviews Area -->
-			<section class="reviews-area section-gap">
-				<div class="container">
-					<div class="row section-title">
-						<h1>Client’s Reviews</h1>
-						<p>We take pride in delivering exceptional service, and our customers love sharing their experiences. See what they have to say.</p>
-					</div>					
-					<div class="row">
-						<div class="col-lg-4 col-md-6">
-							<div class="single-review">
-								<h4>Cody Hines</h4>
-								<p>
-									"Arrow Cab is always on time and the drivers are incredibly polite. It's my go-to taxi service!"
-								</p>
-								<div class="star">
-									<span class="fa fa-star checked"></span>
-									<span class="fa fa-star checked"></span>
-									<span class="fa fa-star checked"></span>
-									<span class="fa fa-star"></span>
-									<span class="fa fa-star"></span>
-								</div>
+							<div class="form-group">
+								<label style="font-weight: 600; margin-bottom: 8px; color: var(--text-dark);">Contact Details</label>
+								<input class="form-control" type="tel" id="customerPhone" placeholder="Phone number" required>
+								<input class="form-control mt-2" type="email" id="customerEmail" placeholder="Email (optional)">
 							</div>
-						</div>	
-						<div class="col-lg-4 col-md-6">
-							<div class="single-review">
-								<h4>Chad Herrera</h4>
-								<p>
-									"Affordable prices and clean vehicles. I always feel safe traveling with Arrow Cab."
-								</p>
-								<div class="star">
-									<span class="fa fa-star checked"></span>
-									<span class="fa fa-star checked"></span>
-									<span class="fa fa-star checked"></span>
-									<span class="fa fa-star"></span>
-									<span class="fa fa-star"></span>
-								</div>
-							</div>
-						</div>	
-						<div class="col-lg-4 col-md-6">
-							<div class="single-review">
-								<h4>Andre Gonzalez</h4>
-								<p>
-									"Amazing service! The booking process was so easy, and the ride was smooth and comfortable."
-								</p>
-								<div class="star">
-									<span class="fa fa-star checked"></span>
-									<span class="fa fa-star checked"></span>
-									<span class="fa fa-star checked"></span>
-									<span class="fa fa-star"></span>
-									<span class="fa fa-star"></span>
-								</div>
-							</div>
-						</div>	
-						<div class="col-lg-4 col-md-6">
-							<div class="single-review">
-								<h4>Jon Banks</h4>
-								<p>
-									"Fast and reliable. The best taxi service in Fort McMurray by far!"
-								</p>
-								<div class="star">
-									<span class="fa fa-star checked"></span>
-									<span class="fa fa-star checked"></span>
-									<span class="fa fa-star checked"></span>
-									<span class="fa fa-star"></span>
-									<span class="fa fa-star"></span>
-								</div>
-							</div>
-						</div>	
-						<div class="col-lg-4 col-md-6">
-							<div class="single-review">
-								<h4>Landon Houston</h4>
-								<p>
-									"I needed a ride to the airport early in the morning, and Arrow Cab made it hassle-free. Highly recommend!"
-								</p>
-								<div class="star">
-									<span class="fa fa-star checked"></span>
-									<span class="fa fa-star checked"></span>
-									<span class="fa fa-star checked"></span>
-									<span class="fa fa-star"></span>
-									<span class="fa fa-star"></span>
-								</div>
-							</div>
-						</div>	
-						<div class="col-lg-4 col-md-6">
-							<div class="single-review">
-								<h4>Nelle Wade</h4>
-								<p>
-									"Professional and courteous drivers. Great service overall!"
-								</p>
-								<div class="star">
-									<span class="fa fa-star checked"></span>
-									<span class="fa fa-star checked"></span>
-									<span class="fa fa-star checked"></span>
-									<span class="fa fa-star"></span>
-									<span class="fa fa-star"></span>
-								</div>
-							</div>
-						</div>																															
-					</div>
-				</div>	
-			</section>
-			<!-- End reviews Area -->
-							
-			<!-- Start home-calltoaction Area -->
-			<section class="home-calltoaction-area relative">
-				<div class="container">
-					<div class="overlay overlay-bg"></div>
-					<div class="row align-items-center section-gap">
-						<div class="col-lg-8">
-							<h1>Experience Unmatched Support</h1>
-							<p>
-								At ArrowCab, we prioritize your needs by offering dedicated customer support to ensure your journey is as seamless as possible. From booking to drop-off, we're here to assist you every step of the way
-							</p>
-						</div>
-						<div class="col-lg-4 btn-left">
-							<a href="contact.html" class="primary-btn">Contact Our Support Team</a>
-						</div>
-					</div>
-				</div>	
-			</section>
-			<!-- End home-calltoaction Area -->
-			
-			<!-- Start latest-blog Area -->
-			
-			<!-- End latest-blog Area -->
-			
-			<!-- start footer Area -->		
-			<footer class="footer-area section-gap">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-2 col-md-6 col-sm-6">
-							<div class="single-footer-widget">
-								<h6>Quick links</h6>
-								<ul>
-									<li><a href="#">Jobs</a></li>
-									<li><a href="#">Guides</a></li>
-								</ul>								
-							</div>
-						</div>
-						<div class="col-lg-2 col-md-6 col-sm-6">
-							<div class="single-footer-widget">
-								<h6>Features</h6>
-								<ul>
-									<li><a href="#">Jobs</a></li>
-								</ul>								
-							</div>
-						</div>
-						<div class="col-lg-2 col-md-6 col-sm-6">
-							<div class="single-footer-widget">
-								<h6>Resources</h6>
-								<ul>
-									<li><a href="#">Guides</a></li>
-								</ul>								
-							</div>
-						</div>												
-						<div class="col-lg-2 col-md-6 col-sm-6 social-widget">
-							<div class="single-footer-widget">
-								<h6>Follow Us</h6>
-								<p>Let us be social</p>
-								<div class="footer-social d-flex align-items-center">
-									<a href="#"><i class="fa fa-facebook"></i></a>
-									<a href="#"><i class="fa fa-twitter"></i></a>
-									<a href="#"><i class="fa fa-dribbble"></i></a>
-									<a href="#"><i class="fa fa-behance"></i></a>
-								</div>
-							</div>
-						</div>							
-						<div class="col-lg-4  col-md-6 col-sm-6">
-							<div class="single-footer-widget">
-								<h6>Newsletter</h6>
-								<p>Stay update with our latest</p>
-								<div class="" id="mc_embed_signup">
-									<form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="form-inline">
-										<input class="form-control" name="EMAIL" placeholder="Enter Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email '" required="" type="email">
-			                            	<button class="click-btn btn btn-default"><span class="lnr lnr-arrow-right"></span></button>
-			                            	<div style="position: absolute; left: -5000px;">
-												<input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
-											</div>
 
-										<div class="info"></div>
-									</form>
-								</div>
+							<div class="form-group">
+								<label style="font-weight: 600; margin-bottom: 8px; color: var(--text-dark);">Pickup Location</label>
+								<select class="form-control" id="fromLocation" required>
+									<option value="" disabled selected>Select pickup location</option>
+									<optgroup label="Fort McMurray">
+										<option value="Downtown Fort McMurray">Downtown Fort McMurray</option>
+										<option value="Abasand">Abasand</option>
+										<option value="Beacon Hill">Beacon Hill</option>
+										<option value="Dickinsfield">Dickinsfield</option>
+										<option value="Eagle Ridge">Eagle Ridge</option>
+										<option value="Gregoire">Gregoire</option>
+										<option value="Parsons Creek">Parsons Creek</option>
+										<option value="Stone Creek">Stone Creek</option>
+										<option value="Thickwood">Thickwood</option>
+										<option value="Timberlea">Timberlea</option>
+										<option value="Waterways">Waterways</option>
+									</optgroup>
+									<optgroup label="Oil Sands Camps">
+										<option value="Kearl Oil Sands">Kearl Oil Sands Camp</option>
+										<option value="Suncor Firebag">Suncor Firebag Camp</option>
+										<option value="Suncor Fort Hills">Suncor Fort Hills Camp</option>
+										<option value="CNRL Horizon">CNRL Horizon</option>
+										<option value="Syncrude Mildred Lake">Syncrude Mildred Lake</option>
+									</optgroup>
+									<optgroup label="Major Alberta Cities">
+										<option value="Calgary">Calgary</option>
+										<option value="Edmonton">Edmonton</option>
+										<option value="Red Deer">Red Deer</option>
+										<option value="Lethbridge">Lethbridge</option>
+										<option value="Medicine Hat">Medicine Hat</option>
+										<option value="Brooks">Brooks</option>
+										<option value="Grande Prairie">Grande Prairie</option>
+									</optgroup>
+									<optgroup label="Regional Towns">
+										<option value="Lac La Biche">Lac La Biche</option>
+										<option value="Slave Lake">Slave Lake</option>
+										<option value="Athabasca">Athabasca</option>
+										<option value="Bonnyville">Bonnyville</option>
+										<option value="Cold Lake">Cold Lake</option>
+										<option value="St. Paul">St. Paul</option>
+										<option value="Whitecourt">Whitecourt</option>
+									</optgroup>
+									<option value="Other">Other (Specify in notes)</option>
+								</select>
 							</div>
-						</div>	
-						<p class="mt-80 mx-auto footer-text col-lg-12">
-        Copyright &copy;<script>document.write(new Date().getFullYear());</script> Arrow Cab. All rights reserved.
-    </p>						
+
+							<div class="form-group">
+								<label style="font-weight: 600; margin-bottom: 8px; color: var(--text-dark);">Destination</label>
+								<select class="form-control" id="toLocation" required>
+									<option value="" disabled selected>Select destination</option>
+									<optgroup label="Fort McMurray">
+										<option value="Downtown Fort McMurray">Downtown Fort McMurray</option>
+										<option value="Abasand">Abasand</option>
+										<option value="Beacon Hill">Beacon Hill</option>
+										<option value="Dickinsfield">Dickinsfield</option>
+										<option value="Eagle Ridge">Eagle Ridge</option>
+										<option value="Gregoire">Gregoire</option>
+										<option value="Parsons Creek">Parsons Creek</option>
+										<option value="Stone Creek">Stone Creek</option>
+										<option value="Thickwood">Thickwood</option>
+										<option value="Timberlea">Timberlea</option>
+										<option value="Waterways">Waterways</option>
+										<option value="Fort McMurray Airport">Fort McMurray Airport</option>
+									</optgroup>
+									<optgroup label="Oil Sands Camps">
+										<option value="Kearl Oil Sands">Kearl Oil Sands Camp</option>
+										<option value="Suncor Firebag">Suncor Firebag Camp</option>
+										<option value="Suncor Fort Hills">Suncor Fort Hills Camp</option>
+										<option value="CNRL Horizon">CNRL Horizon</option>
+										<option value="Syncrude Mildred Lake">Syncrude Mildred Lake</option>
+									</optgroup>
+									<optgroup label="Major Alberta Cities">
+										<option value="Calgary">Calgary (550 km)</option>
+										<option value="Calgary Airport">Calgary International Airport</option>
+										<option value="Edmonton">Edmonton (435 km)</option>
+										<option value="Edmonton Airport">Edmonton International Airport</option>
+										<option value="Red Deer">Red Deer (400 km)</option>
+										<option value="Lethbridge">Lethbridge (680 km)</option>
+										<option value="Medicine Hat">Medicine Hat (650 km)</option>
+										<option value="Brooks">Brooks (590 km)</option>
+										<option value="Grande Prairie">Grande Prairie (480 km)</option>
+									</optgroup>
+									<optgroup label="Regional Towns">
+										<option value="Lac La Biche">Lac La Biche (170 km)</option>
+										<option value="Slave Lake">Slave Lake (250 km)</option>
+										<option value="Athabasca">Athabasca (260 km)</option>
+										<option value="Bonnyville">Bonnyville (310 km)</option>
+										<option value="Cold Lake">Cold Lake (290 km)</option>
+										<option value="St. Paul">St. Paul (340 km)</option>
+										<option value="Whitecourt">Whitecourt (330 km)</option>
+									</optgroup>
+									<option value="Other">Other (Specify in notes)</option>
+								</select>
+							</div>
+
+							<div class="form-group">
+								<label style="font-weight: 600; margin-bottom: 8px; color: var(--text-dark);">Pickup Date & Time</label>
+								<input class="form-control" type="datetime-local" id="pickupTime" required>
+							</div>
+
+							<div class="form-group">
+								<label style="font-weight: 600; margin-bottom: 8px; color: var(--text-dark);">Number of Passengers</label>
+								<select class="form-control" id="passengers" required>
+									<option value="1">1 Passenger</option>
+									<option value="2">2 Passengers</option>
+									<option value="3">3 Passengers</option>
+									<option value="4">4 Passengers</option>
+									<option value="5+">5+ Passengers (Large vehicle)</option>
+								</select>
+							</div>
+
+							<div class="form-group">
+								<label style="font-weight: 600; margin-bottom: 8px; color: var(--text-dark);">Additional Notes</label>
+								<textarea class="form-control" id="bookingNotes" rows="2" placeholder="Special requests, luggage, etc."></textarea>
+							</div>
+
+							<div class="price-estimate" id="priceEstimate">
+								<h5>Estimated Fare</h5>
+								<div class="price-amount" id="priceAmount">$0</div>
+								<small style="opacity: 0.8;">Final price may vary based on actual route and conditions</small>
+							</div>
+
+							<button class="btn btn-primary btn-block btn-lg mt-3" type="submit">
+								<i class="fa fa-check-circle"></i> Confirm Booking
+							</button>
+						</form>
 					</div>
 				</div>
-				<img class="footer-bottom" src="img/footer-bottom.png" alt="">
-			</footer>	
-			<!-- End footer Area -->	
+			</div>
+		</div>
+	</section>
 
-			<script src="js/vendor/jquery-2.2.4.min.js"></script>
-			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-			<script src="js/vendor/bootstrap.min.js"></script>			
-			<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
-  			<script src="js/easing.min.js"></script>			
-			<script src="js/hoverIntent.js"></script>
-			<script src="js/superfish.min.js"></script>	
-			<script src="js/jquery.ajaxchimp.min.js"></script>
-			<script src="js/jquery.magnific-popup.min.js"></script>	
- 			<script src="js/jquery-ui.js"></script>								
-			<script src="js/jquery.nice-select.min.js"></script>							
-			<script src="js/mail-script.js"></script>	
-			<script src="js/main.js"></script>	
-		</body>
-	</html>
+	<!-- Stats Section -->
+	<section class="stats-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+					<div class="stat-item">
+						<div class="stat-number">15K+</div>
+						<div class="stat-label">Happy Customers</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+					<div class="stat-item">
+						<div class="stat-number">24/7</div>
+						<div class="stat-label">Available Service</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+					<div class="stat-item">
+						<div class="stat-number">50+</div>
+						<div class="stat-label">Cities Covered</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="stat-item">
+						<div class="stat-number">98%</div>
+						<div class="stat-label">On-Time Rate</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Services Area -->
+	<section class="services-area">
+		<div class="container">
+			<div class="row section-title text-center">
+				<div class="col-12">
+					<h1>Why Choose Arrow Cab?</h1>
+					<p>Professional transportation solutions designed for your comfort and convenience</p>
+				</div>
+			</div>
+			<div class="row mt-5">
+				<div class="col-lg-4 col-md-6 mb-4">
+					<div class="feature-card">
+						<div class="icon">
+							<i class="fa fa-map-marker"></i>
+						</div>
+						<h4>Province-Wide Coverage</h4>
+						<p>From Fort McMurray to Calgary, Edmonton, and everywhere in between. We cover all major cities and towns across Alberta.</p>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 mb-4">
+					<div class="feature-card">
+						<div class="icon">
+							<i class="fa fa-clock-o"></i>
+						</div>
+						<h4>24/7 Availability</h4>
+						<p>Round-the-clock service means we're always here when you need us, day or night, weekends and holidays.</p>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 mb-4">
+					<div class="feature-card">
+						<div class="icon">
+							<i class="fa fa-dollar"></i>
+						</div>
+						<h4>Transparent Pricing</h4>
+						<p>Know your fare before you book. No hidden fees, no surprises - just honest, competitive rates.</p>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 mb-4">
+					<div class="feature-card">
+						<div class="icon">
+							<i class="fa fa-shield"></i>
+						</div>
+						<h4>Safe & Reliable</h4>
+						<p>Professional drivers, well-maintained vehicles, and comprehensive insurance for your peace of mind.</p>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 mb-4">
+					<div class="feature-card">
+						<div class="icon">
+							<i class="fa fa-star"></i>
+						</div>
+						<h4>Premium Comfort</h4>
+						<p>Clean, modern vehicles with air conditioning, comfortable seating, and amenities for a pleasant journey.</p>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 mb-4">
+					<div class="feature-card">
+						<div class="icon">
+							<i class="fa fa-briefcase"></i>
+						</div>
+						<h4>Corporate Accounts</h4>
+						<p>Special rates for businesses, oil sands workers, and corporate clients. Invoicing and reporting available.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Popular Destinations -->
+	<section style="background: var(--bg-light);">
+		<div class="container">
+			<div class="row section-title text-center">
+				<div class="col-12">
+					<h1>Popular Routes</h1>
+					<p>Serving all of Alberta with premium transportation services</p>
+				</div>
+			</div>
+			<div class="row mt-5">
+				<div class="col-lg-4 col-md-6 mb-4">
+					<div class="destination-card">
+						<img src="img/destinations/calgary.jpg" alt="Calgary" onerror="this.src='img/g1.jpg'">
+						<div class="destination-info">
+							<h3>Calgary</h3>
+							<p><i class="fa fa-road"></i> 550 km • Approx. 6 hours</p>
+							<p style="margin-top: 10px; font-weight: 600;">Starting from $650</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 mb-4">
+					<div class="destination-card">
+						<img src="img/destinations/edmonton.jpg" alt="Edmonton" onerror="this.src='img/g2.jpg'">
+						<div class="destination-info">
+							<h3>Edmonton</h3>
+							<p><i class="fa fa-road"></i> 435 km • Approx. 5 hours</p>
+							<p style="margin-top: 10px; font-weight: 600;">Starting from $520</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 mb-4">
+					<div class="destination-card">
+						<img src="img/destinations/oil-sands.jpg" alt="Oil Sands Camps" onerror="this.src='img/g3.jpg'">
+						<div class="destination-info">
+							<h3>Oil Sands Camps</h3>
+							<p><i class="fa fa-road"></i> Varies • Multiple sites</p>
+							<p style="margin-top: 10px; font-weight: 600;">Starting from $80</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Fleet Showcase -->
+	<section id="fleet">
+		<div class="container">
+			<div class="row section-title text-center">
+				<div class="col-12">
+					<h1>Our Premium Fleet</h1>
+					<p>Clean, comfortable, and well-maintained vehicles for every journey</p>
+				</div>
+			</div>
+			<div class="row mt-5">
+				<div class="col-lg-4 col-md-6 mb-4">
+					<div class="fleet-card">
+						<img src="img/fleet/sedan.jpg" alt="Sedan" onerror="this.src='img/g4.jpg'">
+						<div class="fleet-info">
+							<h4>Standard Sedan</h4>
+							<p>Perfect for 1-3 passengers with luggage. Comfortable city rides and medium-distance trips.</p>
+							<div class="fleet-features">
+								<span class="fleet-feature"><i class="fa fa-users"></i> Up to 3</span>
+								<span class="fleet-feature"><i class="fa fa-suitcase"></i> 2 Bags</span>
+								<span class="fleet-feature"><i class="fa fa-snowflake-o"></i> A/C</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 mb-4">
+					<div class="fleet-card">
+						<img src="img/fleet/suv.jpg" alt="SUV" onerror="this.src='img/g5.jpg'">
+						<div class="fleet-info">
+							<h4>Premium SUV</h4>
+							<p>Spacious and comfortable for families or groups. Ideal for long-distance Alberta trips.</p>
+							<div class="fleet-features">
+								<span class="fleet-feature"><i class="fa fa-users"></i> Up to 6</span>
+								<span class="fleet-feature"><i class="fa fa-suitcase"></i> 4 Bags</span>
+								<span class="fleet-feature"><i class="fa fa-wifi"></i> WiFi</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 mb-4">
+					<div class="fleet-card">
+						<img src="img/fleet/van.jpg" alt="Van" onerror="this.src='img/g6.jpg'">
+						<div class="fleet-info">
+							<h4>Large Van</h4>
+							<p>Perfect for large groups or corporate transportation. Maximum comfort for everyone.</p>
+							<div class="fleet-features">
+								<span class="fleet-feature"><i class="fa fa-users"></i> Up to 8</span>
+								<span class="fleet-feature"><i class="fa fa-suitcase"></i> 6 Bags</span>
+								<span class="fleet-feature"><i class="fa fa-video-camera"></i> Premium</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Call to Action -->
+	<section class="home-calltoaction-area relative">
+		<div class="container">
+			<div class="overlay overlay-bg"></div>
+			<div class="row align-items-center section-gap">
+				<div class="col-lg-8">
+					<h1 class="text-white">Ready to Book Your Ride?</h1>
+					<p class="text-white" style="font-size: 18px;">
+						Available 24/7 for all your transportation needs across Alberta.
+						Call us now or book online for instant confirmation.
+					</p>
+				</div>
+				<div class="col-lg-4 btn-left">
+					<a href="#home" class="btn btn-primary btn-lg">
+						<i class="fa fa-calendar"></i> Book Now
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Footer -->
+	<footer class="footer-area section-gap">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-md-6 col-sm-6">
+					<div class="single-footer-widget">
+						<h6>Quick Links</h6>
+						<ul>
+							<li><a href="about.html">About Us</a></li>
+							<li><a href="service.html">Services</a></li>
+							<li><a href="gallery.html">Gallery</a></li>
+							<li><a href="contact.html">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 col-sm-6">
+					<div class="single-footer-widget">
+						<h6>Services</h6>
+						<ul>
+							<li><a href="#">Local Rides</a></li>
+							<li><a href="#">Long Distance</a></li>
+							<li><a href="#">Airport Transfer</a></li>
+							<li><a href="#">Corporate</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 col-sm-6">
+					<div class="single-footer-widget">
+						<h6>Contact Info</h6>
+						<p><strong>Phone:</strong> +1 587 645 7951</p>
+						<p><strong>Email:</strong> arrowcab10@gmail.com</p>
+						<p><strong>Location:</strong> Fort McMurray, AB</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 col-sm-6">
+					<div class="single-footer-widget">
+						<h6>Follow Us</h6>
+						<p>Stay connected on social media</p>
+						<div class="footer-social d-flex align-items-center">
+							<a href="#"><i class="fa fa-facebook"></i></a>
+							<a href="#"><i class="fa fa-twitter"></i></a>
+							<a href="#"><i class="fa fa-instagram"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<p class="mt-80 mx-auto footer-text col-lg-12 text-center">
+				Copyright &copy;<script>document.write(new Date().getFullYear());</script> Arrow Cab. All rights reserved.
+			</p>
+		</div>
+		<img class="footer-bottom" src="img/footer-bottom.png" alt="">
+	</footer>
+
+	<!-- Scripts -->
+	<script src="js/vendor/jquery-2.2.4.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="js/vendor/bootstrap.min.js"></script>
+	<script src="js/easing.min.js"></script>
+	<script src="js/hoverIntent.js"></script>
+	<script src="js/superfish.min.js"></script>
+	<script src="js/jquery.ajaxchimp.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script src="js/jquery.nice-select.min.js"></script>
+	<script src="js/main.js"></script>
+
+	<script src="js/booking-system.js"></script>
+</body>
+</html>

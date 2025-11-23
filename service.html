@@ -1,224 +1,334 @@
-	<!DOCTYPE html>
-	<html lang="zxx" class="no-js">
-	<head>
-		<!-- Mobile Specific Meta -->
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<!-- Favicon-->
-		<link rel="shortcut icon" href="img/fav.png">
-		<!-- Author Meta -->
-		<meta name="author" content="colorlib">
-		<!-- Meta Description -->
-		<meta name="description" content="">
-		<!-- Meta Keyword -->
-		<meta name="keywords" content="">
-		<!-- meta character set -->
-		<meta charset="UTF-8">
-		<!-- Site Title -->
-		<title>Taxi</title>
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="author" content="Arrow Cab">
+	<meta name="description" content="Arrow Cab services - Local rides, long-distance trips, airport transfers, corporate transportation across Alberta">
+	<meta name="keywords" content="taxi services, Fort McMurray, Calgary, Edmonton, airport transfer, corporate taxi">
 
-		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
-			<!--
-			CSS
-			============================================= -->
-			<link rel="stylesheet" href="css/linearicons.css">
-			<link rel="stylesheet" href="css/font-awesome.min.css">
-			<link rel="stylesheet" href="css/bootstrap.css">
-			<link rel="stylesheet" href="css/magnific-popup.css">
-			<link rel="stylesheet" href="css/nice-select.css">							
-			<link rel="stylesheet" href="css/animate.min.css">
-			<link rel="stylesheet" href="css/jquery-ui.css">			
-			<link rel="stylesheet" href="css/main.css">
-		</head>
-		<body>	
-			  <header id="header">
-		  		<div class="header-top">
-				</div>
-			    <div class="container main-menu">
-			    	<div class="row align-items-center justify-content-between d-flex align-items-center">
-			    		<a href="index.html"><img src="img/logo.png" alt="" title="" /></a>		
-						<nav id="nav-menu-container">
-							<ul class="nav-menu">
-							  <li class="menu-active"><a href="index.html">Home</a></li>
-							  <li><a href="about.html">About</a></li>
-							  <li><a href="service.html">Services</a></li>
-							  <li><a href="gallery.html">Gallery</a></li>						  			          	          
-							  <li><a href="contact.html">Contact</a></li>
-							</ul>
-						</nav><!-- #nav-menu-container -->		
-			    	</div>
-			    </div>
-			  </header><!-- #header -->
-			  
-			<!-- start banner Area -->
-			<section class="banner-area relative about-banner" id="home">	
-				<div class="overlay overlay-bg"></div>
-				<div class="container">				
-					<div class="row d-flex align-items-center justify-content-center">
-						<div class="about-content col-lg-12">
-							<h1 class="text-white">
-								Services				
-							</h1>	
-							<p class="text-white link-nav"><a href="index.html">Home </a>  <span class="lnr lnr-arrow-right"></span>  <a href="service.html"> Services</a></p>
-						</div>	
+	<title>Our Services | Arrow Cab - Transportation Across Alberta</title>
+
+	<link rel="shortcut icon" href="img/fav.png">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/linearicons.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<link rel="stylesheet" href="css/nice-select.css">
+	<link rel="stylesheet" href="css/animate.min.css">
+	<link rel="stylesheet" href="css/jquery-ui.css">
+	<link rel="stylesheet" href="css/main.css">
+
+	<style>
+		:root {
+			--primary-color: #2563eb;
+			--primary-dark: #1e40af;
+			--accent-color: #3b82f6;
+			--success-color: #10b981;
+			--text-dark: #1f2937;
+			--text-light: #6b7280;
+			--bg-light: #f9fafb;
+			--border-color: #e5e7eb;
+			--shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+			--shadow-lg: 0 10px 25px rgba(0,0,0,0.15);
+		}
+
+		* { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+		h1, h2, h3, h4 { font-family: 'Poppins', sans-serif; }
+
+		#header {
+			background: rgba(255, 255, 255, 0.98);
+			backdrop-filter: blur(10px);
+			box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+		}
+
+		.page-header {
+			background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+			padding: 150px 0 100px;
+			color: white;
+		}
+
+		.page-header h1 { font-size: 56px; font-weight: 700; margin-bottom: 20px; }
+		section { padding: 100px 0; }
+
+		.service-card {
+			background: white;
+			border-radius: 16px;
+			padding: 40px;
+			box-shadow: var(--shadow-md);
+			transition: all 0.3s ease;
+			border: 2px solid var(--border-color);
+			height: 100%;
+		}
+
+		.service-card:hover {
+			transform: translateY(-8px);
+			box-shadow: var(--shadow-lg);
+			border-color: var(--primary-color);
+		}
+
+		.service-icon {
+			width: 80px;
+			height: 80px;
+			margin-bottom: 24px;
+			background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+			border-radius: 20px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 36px;
+			color: white;
+		}
+
+		.service-card h3 {
+			font-size: 24px;
+			font-weight: 700;
+			margin-bottom: 16px;
+			color: var(--text-dark);
+		}
+
+		.service-card p {
+			font-size: 16px;
+			color: var(--text-light);
+			line-height: 1.8;
+			margin-bottom: 20px;
+		}
+
+		.service-features {
+			list-style: none;
+			padding: 0;
+		}
+
+		.service-features li {
+			padding: 8px 0;
+			color: var(--text-dark);
+		}
+
+		.service-features li i {
+			color: var(--success-color);
+			margin-right: 10px;
+		}
+
+		.pricing-badge {
+			background: var(--bg-light);
+			padding: 8px 16px;
+			border-radius: 8px;
+			font-weight: 600;
+			color: var(--primary-color);
+			display: inline-block;
+			margin-top: 16px;
+		}
+
+		@media (max-width: 768px) {
+			.page-header h1 { font-size: 36px; }
+		}
+	</style>
+</head>
+<body>
+	<header id="header">
+		<div class="container main-menu">
+			<div class="row align-items-center justify-content-between d-flex">
+				<a href="index.html"><img src="img/logo.png" alt="Arrow Cab" /></a>
+				<nav id="nav-menu-container">
+					<ul class="nav-menu">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="about.html">About</a></li>
+						<li class="menu-active"><a href="service.html">Services</a></li>
+						<li><a href="gallery.html">Gallery</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
+
+	<section class="page-header">
+		<div class="container text-center">
+			<h1>Our Services</h1>
+			<p style="font-size: 20px; opacity: 0.95;">Comprehensive transportation solutions for every need across Alberta</p>
+		</div>
+	</section>
+
+	<section>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4 col-md-6 mb-4">
+					<div class="service-card">
+						<div class="service-icon"><i class="fa fa-car"></i></div>
+						<h3>Local Rides</h3>
+						<p>Quick and reliable taxi service throughout Fort McMurray. Perfect for daily commutes, shopping trips, or getting around town.</p>
+						<ul class="service-features">
+							<li><i class="fa fa-check-circle"></i> Prompt pickup times</li>
+							<li><i class="fa fa-check-circle"></i> Clean, comfortable vehicles</li>
+							<li><i class="fa fa-check-circle"></i> Professional drivers</li>
+							<li><i class="fa fa-check-circle"></i> Competitive flat rates</li>
+						</ul>
+						<div class="pricing-badge">From $15</div>
 					</div>
 				</div>
-			</section>
-			<!-- End banner Area -->	
 
-			<!-- Start services Area -->
-			<section class="services-area section-gap">
-    <div class="container">
-        <div class="row section-title">
-            <h1>Our Professional Services</h1>
-            <p>At Arrow Cab, we take pride in offering top-quality, reliable, and eco-friendly transportation solutions tailored to meet your needs.</p>
-        </div>
-        <div class="row">
-            <div class="col-lg-4 single-service">
-                <span class="lnr lnr-car"></span>
-                <a href="#"><h4>Taxi Service</h4></a>
-                <p>
-                    Enjoy safe, clean, and punctual rides across Fort McMurray. Our experienced drivers ensure your journey is smooth and stress-free.
-                </p>
-            </div>
-            <div class="col-lg-4 single-service">
-                <span class="lnr lnr-briefcase"></span>
-                <a href="#"><h4>Office Pick-ups</h4></a>
-                <p>
-                    Reliable corporate transportation for meetings, office commutes, and business needs. Count on us for professionalism and punctuality.
-                </p>
-            </div>
-            <div class="col-lg-4 single-service">
-                <span class="lnr lnr-bus"></span>
-                <a href="#"><h4>Event Transportation</h4></a>
-                <p>
-                    Whether it's a wedding, party, or corporate event, our timely and convenient rides make sure you arrive in style and on time.
-                </p>
-            </div>												
-        </div>	
-    </div>	
-</section>
-<!-- End services Area -->
-
-<!-- Start home-calltoaction Area -->
-<section class="home-calltoaction-area relative">
-    <div class="container">
-        <div class="overlay overlay-bg"></div>
-        <div class="row align-items-center section-gap">
-            <div class="col-lg-8">
-                <h1>Experience Outstanding Support</h1>
-                <p>
-                    At Arrow Cab, customer satisfaction is our priority. From booking to arrival, our dedicated team ensures a seamless experience. Reach out to us anytime for assistance.
-                </p>
-            </div>
-            <div class="col-lg-4 btn-left">
-                <a href="contact.html" class="primary-btn">Contact Our Support Team</a>
-            </div>
-        </div>
-    </div>	
-</section>
-<!-- End home-calltoaction Area -->
-
-<!-- Start home-about Area -->
-<section class="home-about-area section-gap">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6 about-left">
-                <img class="img-fluid" src="img/about-img.jpg" alt="About Arrow Cab">
-            </div>
-            <div class="col-lg-6 about-right">
-                <h1>Globally Connected by a Large Network</h1>
-                <h4>Listening to You, Delivering Excellence</h4>
-                <p>
-                    At Arrow Cab, we believe in building strong connections with our customers and communities. Our team is dedicated to delivering exceptional service that exceeds expectations. Whether you're traveling locally or need transportation for special events, we’re here to make your journey hassle-free.
-                </p>
-                <a class="text-uppercase primary-btn" href="#">Learn More</a>
-            </div>
-        </div>
-    </div>	
-</section>
-<!-- End home-about Area -->
-
-			<!-- End home-about Area -->												
-				    																			
-			<!-- start footer Area -->		
-			<footer class="footer-area section-gap">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-2 col-md-6 col-sm-6">
-							<div class="single-footer-widget">
-								<h6>Quick links</h6>
-								<ul>
-									<li><a href="#">Jobs</a></li>
-									<li><a href="#">Guides</a></li>
-								</ul>								
-							</div>
-						</div>
-						<div class="col-lg-2 col-md-6 col-sm-6">
-							<div class="single-footer-widget">
-								<h6>Features</h6>
-								<ul>
-									<li><a href="#">Jobs</a></li>
-								</ul>								
-							</div>
-						</div>
-						<div class="col-lg-2 col-md-6 col-sm-6">
-							<div class="single-footer-widget">
-								<h6>Resources</h6>
-								<ul>
-									<li><a href="#">Guides</a></li>
-								</ul>								
-							</div>
-						</div>												
-						<div class="col-lg-2 col-md-6 col-sm-6 social-widget">
-							<div class="single-footer-widget">
-								<h6>Follow Us</h6>
-								<p>Let us be social</p>
-								<div class="footer-social d-flex align-items-center">
-									<a href="#"><i class="fa fa-facebook"></i></a>
-									<a href="#"><i class="fa fa-twitter"></i></a>
-									<a href="#"><i class="fa fa-dribbble"></i></a>
-									<a href="#"><i class="fa fa-behance"></i></a>
-								</div>
-							</div>
-						</div>							
-						<div class="col-lg-4  col-md-6 col-sm-6">
-							<div class="single-footer-widget">
-								<h6>Newsletter</h6>
-								<p>Stay update with our latest</p>
-								<div class="" id="mc_embed_signup">
-									<form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="form-inline">
-										<input class="form-control" name="EMAIL" placeholder="Enter Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email '" required="" type="email">
-			                            	<button class="click-btn btn btn-default"><span class="lnr lnr-arrow-right"></span></button>
-			                            	<div style="position: absolute; left: -5000px;">
-												<input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
-											</div>
-
-										<div class="info"></div>
-									</form>
-								</div>
-							</div>
-						</div>	
-						<p class="mt-80 mx-auto footer-text col-lg-12">
-        Copyright &copy;<script>document.write(new Date().getFullYear());</script> Arrow Cab. All rights reserved.
-    </p>						
+				<div class="col-lg-4 col-md-6 mb-4">
+					<div class="service-card">
+						<div class="service-icon"><i class="fa fa-road"></i></div>
+						<h3>Long Distance</h3>
+						<p>Province-wide coverage to Calgary, Edmonton, Brooks, and beyond. Comfortable travel across Alberta with experienced drivers.</p>
+						<ul class="service-features">
+							<li><i class="fa fa-check-circle"></i> All major Alberta cities</li>
+							<li><i class="fa fa-check-circle"></i> Rest stops included</li>
+							<li><i class="fa fa-check-circle"></i> Luggage accommodation</li>
+							<li><i class="fa fa-check-circle"></i> Transparent pricing</li>
+						</ul>
+						<div class="pricing-badge">From $1.15/km</div>
 					</div>
 				</div>
-				<img class="footer-bottom" src="img/footer-bottom.png" alt="">
-			</footer>	
-			<!-- End footer Area -->	
 
-			<script src="js/vendor/jquery-2.2.4.min.js"></script>
-			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-			<script src="js/vendor/bootstrap.min.js"></script>			
-			<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
-  			<script src="js/easing.min.js"></script>			
-			<script src="js/hoverIntent.js"></script>
-			<script src="js/superfish.min.js"></script>	
-			<script src="js/jquery.ajaxchimp.min.js"></script>
-			<script src="js/jquery.magnific-popup.min.js"></script>	
- 			<script src="js/jquery-ui.js"></script>								
-			<script src="js/jquery.nice-select.min.js"></script>							
-			<script src="js/mail-script.js"></script>	
-			<script src="js/main.js"></script>		
-		</body>
-	</html>
+				<div class="col-lg-4 col-md-6 mb-4">
+					<div class="service-card">
+						<div class="service-icon"><i class="fa fa-plane"></i></div>
+						<h3>Airport Transfer</h3>
+						<p>Stress-free transportation to and from Fort McMurray, Calgary, and Edmonton airports. Never miss a flight again.</p>
+						<ul class="service-features">
+							<li><i class="fa fa-check-circle"></i> Flight tracking</li>
+							<li><i class="fa fa-check-circle"></i> Meet & greet service</li>
+							<li><i class="fa fa-check-circle"></i> Spacious for luggage</li>
+							<li><i class="fa fa-check-circle"></i> Early morning available</li>
+						</ul>
+						<div class="pricing-badge">From $50</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-md-6 mb-4">
+					<div class="service-card">
+						<div class="service-icon"><i class="fa fa-industry"></i></div>
+						<h3>Oil Sands Transportation</h3>
+						<p>Dedicated service to all major oil sands camps including Kearl, Suncor, CNRL, and Syncrude facilities.</p>
+						<ul class="service-features">
+							<li><i class="fa fa-check-circle"></i> All camps covered</li>
+							<li><i class="fa fa-check-circle"></i> Shift-friendly scheduling</li>
+							<li><i class="fa fa-check-circle"></i> Regular routes</li>
+							<li><i class="fa fa-check-circle"></i> Worker discounts</li>
+						</ul>
+						<div class="pricing-badge">From $80</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-md-6 mb-4">
+					<div class="service-card">
+						<div class="service-icon"><i class="fa fa-briefcase"></i></div>
+						<h3>Corporate Accounts</h3>
+						<p>Customized transportation solutions for businesses with invoicing, reporting, and priority service.</p>
+						<ul class="service-features">
+							<li><i class="fa fa-check-circle"></i> Monthly invoicing</li>
+							<li><i class="fa fa-check-circle"></i> Volume discounts</li>
+							<li><i class="fa fa-check-circle"></i> Dedicated account manager</li>
+							<li><i class="fa fa-check-circle"></i> Trip reporting</li>
+						</ul>
+						<div class="pricing-badge">Custom Rates</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-md-6 mb-4">
+					<div class="service-card">
+						<div class="service-icon"><i class="fa fa-calendar"></i></div>
+						<h3>Event Transportation</h3>
+						<p>Group transportation for weddings, conferences, sporting events, and special occasions across Alberta.</p>
+						<ul class="service-features">
+							<li><i class="fa fa-check-circle"></i> Large vehicle options</li>
+							<li><i class="fa fa-check-circle"></i> Multiple pickup points</li>
+							<li><i class="fa fa-check-circle"></i> Flexible scheduling</li>
+							<li><i class="fa fa-check-circle"></i> Group discounts</li>
+						</ul>
+						<div class="pricing-badge">Contact for Quote</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="home-calltoaction-area relative">
+		<div class="container">
+			<div class="overlay overlay-bg"></div>
+			<div class="row align-items-center section-gap">
+				<div class="col-lg-8">
+					<h1 class="text-white">Need a Custom Solution?</h1>
+					<p class="text-white" style="font-size: 18px;">
+						Contact us to discuss your specific transportation needs. We're happy to create a custom package for you.
+					</p>
+				</div>
+				<div class="col-lg-4 btn-left">
+					<a href="contact.html" style="background: white; color: var(--primary-color); border-radius: 12px; padding: 14px 28px; font-weight: 600; text-decoration: none; display: inline-block;">
+						<i class="fa fa-phone"></i> Contact Us
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer class="footer-area section-gap">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-md-6 col-sm-6">
+					<div class="single-footer-widget">
+						<h6>Quick Links</h6>
+						<ul>
+							<li><a href="about.html">About Us</a></li>
+							<li><a href="service.html">Services</a></li>
+							<li><a href="gallery.html">Gallery</a></li>
+							<li><a href="contact.html">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 col-sm-6">
+					<div class="single-footer-widget">
+						<h6>Services</h6>
+						<ul>
+							<li><a href="#">Local Rides</a></li>
+							<li><a href="#">Long Distance</a></li>
+							<li><a href="#">Airport Transfer</a></li>
+							<li><a href="#">Corporate</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 col-sm-6">
+					<div class="single-footer-widget">
+						<h6>Contact Info</h6>
+						<p><strong>Phone:</strong> +1 587 645 7951</p>
+						<p><strong>Email:</strong> arrowcab10@gmail.com</p>
+						<p><strong>Location:</strong> Fort McMurray, AB</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 col-sm-6">
+					<div class="single-footer-widget">
+						<h6>Follow Us</h6>
+						<p>Stay connected on social media</p>
+						<div class="footer-social d-flex align-items-center">
+							<a href="#"><i class="fa fa-facebook"></i></a>
+							<a href="#"><i class="fa fa-twitter"></i></a>
+							<a href="#"><i class="fa fa-instagram"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<p class="mt-80 mx-auto footer-text col-lg-12 text-center">
+				Copyright &copy;<script>document.write(new Date().getFullYear());</script> Arrow Cab. All rights reserved.
+			</p>
+		</div>
+		<img class="footer-bottom" src="img/footer-bottom.png" alt="">
+	</footer>
+
+	<script src="js/vendor/jquery-2.2.4.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="js/vendor/bootstrap.min.js"></script>
+	<script src="js/easing.min.js"></script>
+	<script src="js/hoverIntent.js"></script>
+	<script src="js/superfish.min.js"></script>
+	<script src="js/jquery.ajaxchimp.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script src="js/jquery.nice-select.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
