@@ -1,0 +1,21 @@
+# System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor files
+.vscode/
+.idea/
+*.sublime-*
+
+# Temporary files
+*.tmp
+*.log
+*~
+
+# User-specific files (outside project)
+../../../*
+../../*
+
+# Keep only taxi-master files
+!.gitignore

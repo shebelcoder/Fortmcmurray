@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="author" content="Arrow Cab">
+	<meta name="description" content="Learn about Arrow Cab - Fort McMurray's trusted taxi service with province-wide coverage across Alberta.">
+	<meta name="keywords" content="about arrow cab, taxi service, Fort McMurray, Alberta transportation">
+
+	<title>About Us | Arrow Cab - Your Trusted Transportation Partner</title>
+
+	<link rel="shortcut icon" href="img/fav.png">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/linearicons.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<link rel="stylesheet" href="css/nice-select.css">
+	<link rel="stylesheet" href="css/animate.min.css">
+	<link rel="stylesheet" href="css/jquery-ui.css">
+	<link rel="stylesheet" href="css/main.css">
+
+	<style>
+		/* Modern Minimalist Enhancements */
+		:root {
+			--primary-color: #2563eb;
+			--primary-dark: #1e40af;
+			--accent-color: #3b82f6;
+			--success-color: #10b981;
+			--text-dark: #1f2937;
+			--text-light: #6b7280;
+			--bg-light: #f9fafb;
+			--border-color: #e5e7eb;
+			--shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+			--shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+			--shadow-lg: 0 10px 25px rgba(0,0,0,0.15);
+			--shadow-xl: 0 20px 40px rgba(0,0,0,0.2);
+		}
+
+		* {
+			font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+		}
+
+		h1, h2, h3, h4 {
+			font-family: 'Poppins', sans-serif;
+		}
+
+		#header {
+			background: rgba(255, 255, 255, 0.98);
+			backdrop-filter: blur(10px);
+			box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+			transition: all 0.3s ease;
+		}
+
+		#header.header-scrolled {
+			box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+		}
+
+		.main-menu a {
+			font-weight: 500;
+			transition: color 0.3s ease;
+		}
+
+		/* Hero Section */
+		.page-header {
+			background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+			padding: 150px 0 100px;
+			color: white;
+			position: relative;
+			overflow: hidden;
+		}
+
+		.page-header::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="2" fill="white" opacity="0.1"/></svg>') repeat;
+			animation: float 20s linear infinite;
+		}
+
+		@keyframes float {
+			from { transform: translateY(0); }
+			to { transform: translateY(-100px); }
+		}
+
+		.page-header h1 {
+			font-size: 56px;
+			font-weight: 700;
+			margin-bottom: 20px;
+			position: relative;
+			z-index: 1;
+		}
+
+		.page-header p {
+			font-size: 20px;
+			opacity: 0.95;
+			position: relative;
+			z-index: 1;
+			max-width: 700px;
+			margin: 0 auto;
+		}
+
+		/* Content Sections */
+		section {
+			padding: 100px 0;
+		}
+
+		.section-title h2 {
+			font-size: 42px;
+			font-weight: 700;
+			color: var(--text-dark);
+			margin-bottom: 16px;
+			text-align: center;
+		}
+
+		.section-title p {
+			font-size: 18px;
+			color: var(--text-light);
+			text-align: center;
+			max-width: 700px;
+			margin: 0 auto 50px;
+		}
+
+		/* Story Section */
+		.story-content {
+			font-size: 18px;
+			line-height: 1.8;
+			color: var(--text-dark);
+		}
+
+		.story-content p {
+			margin-bottom: 20px;
+		}
+
+		.story-image {
+			border-radius: 16px;
+			overflow: hidden;
+			box-shadow: var(--shadow-lg);
+		}
+
+		.story-image img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		/* Values Cards */
+		.value-card {
+			background: white;
+			border-radius: 16px;
+			padding: 40px;
+			text-align: center;
+			box-shadow: var(--shadow-md);
+			transition: all 0.3s ease;
+			border: 2px solid var(--border-color);
+			height: 100%;
+		}
+
+		.value-card:hover {
+			transform: translateY(-8px);
+			box-shadow: var(--shadow-lg);
+			border-color: var(--primary-color);
+		}
+
+		.value-icon {
+			width: 80px;
+			height: 80px;
+			margin: 0 auto 24px;
+			background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+			border-radius: 20px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 36px;
+			color: white;
+		}
+
+		.value-card h4 {
+			font-size: 22px;
+			font-weight: 700;
+			margin-bottom: 16px;
+			color: var(--text-dark);
+		}
+
+		.value-card p {
+			font-size: 16px;
+			color: var(--text-light);
+			line-height: 1.6;
+		}
+
+		/* Stats */
+		.stats-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+			gap: 40px;
+			margin-top: 50px;
+		}
+
+		.stat-box {
+			text-align: center;
+		}
+
+		.stat-number {
+			font-size: 48px;
+			font-weight: 700;
+			color: var(--primary-color);
+			margin-bottom: 10px;
+		}
+
+		.stat-label {
+			font-size: 16px;
+			color: var(--text-light);
+		}
+
+		/* Location Section */
+		.location-card {
+			background: white;
+			border-radius: 16px;
+			padding: 40px;
+			box-shadow: var(--shadow-md);
+		}
+
+		.location-card h3 {
+			font-size: 28px;
+			font-weight: 700;
+			margin-bottom: 24px;
+			color: var(--text-dark);
+		}
+
+		.location-details {
+			font-size: 18px;
+			line-height: 2;
+			color: var(--text-dark);
+			margin-bottom: 24px;
+		}
+
+		.location-details i {
+			color: var(--primary-color);
+			width: 24px;
+		}
+
+		.map-container {
+			border-radius: 12px;
+			overflow: hidden;
+			box-shadow: var(--shadow-md);
+			margin-top: 30px;
+		}
+
+		.btn-primary {
+			background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+			border: none;
+			border-radius: 12px;
+			padding: 14px 28px;
+			font-weight: 600;
+			font-size: 16px;
+			color: white;
+			text-decoration: none;
+			display: inline-block;
+			transition: all 0.3s ease;
+		}
+
+		.btn-primary:hover {
+			transform: translateY(-2px);
+			box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
+			color: white;
+			text-decoration: none;
+		}
+
+		/* Responsive */
+		@media (max-width: 768px) {
+			.page-header h1 {
+				font-size: 36px;
+			}
+
+			.section-title h2 {
+				font-size: 32px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<header id="header">
+		<div class="container main-menu">
+			<div class="row align-items-center justify-content-between d-flex">
+				<a href="index.html"><img src="img/logo.png" alt="Arrow Cab" title="Arrow Cab" /></a>
+				<nav id="nav-menu-container">
+					<ul class="nav-menu">
+						<li><a href="index.html">Home</a></li>
+						<li class="menu-active"><a href="about.html">About</a></li>
+						<li><a href="service.html">Services</a></li>
+						<li><a href="gallery.html">Gallery</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
+
+	<!-- Page Header -->
+	<section class="page-header">
+		<div class="container text-center">
+			<h1>About Arrow Cab</h1>
+			<p>Fort McMurray's premier taxi service, connecting communities across Alberta for over a decade</p>
+		</div>
+	</section>
+
+	<!-- Our Story -->
+	<section>
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-lg-6 mb-4 mb-lg-0">
+					<div class="section-title" style="text-align: left; margin-bottom: 30px;">
+						<h2 style="text-align: left;">Our Story</h2>
+					</div>
+					<div class="story-content">
+						<p>
+							Founded in Fort McMurray, Arrow Cab has grown from a small local taxi service into Alberta's most trusted
+							long-distance transportation provider. Our journey began with a simple mission: to provide safe, reliable,
+							and affordable transportation to the hardworking people of Fort McMurray.
+						</p>
+						<p>
+							Over the years, we've expanded our services to cover the entire province of Alberta, from the oil sands
+							camps in the north to Calgary and Lethbridge in the south. We understand the unique transportation needs
+							of our communities - whether it's getting workers to remote camps, families to airports, or connecting
+							loved ones across long distances.
+						</p>
+						<p>
+							Today, Arrow Cab operates 24/7 with a modern fleet and professional drivers dedicated to your comfort
+							and safety. We're not just a taxi service - we're your transportation partner, committed to getting you
+							where you need to go, when you need to be there.
+						</p>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="story-image">
+						<img src="img/about-img.jpg" alt="Arrow Cab Story" onerror="this.src='img/g1.jpg'">
+					</div>
+				</div>
+			</div>
+
+			<!-- Stats -->
+			<div class="stats-grid">
+				<div class="stat-box">
+					<div class="stat-number">10+</div>
+					<div class="stat-label">Years in Business</div>
+				</div>
+				<div class="stat-box">
+					<div class="stat-number">15K+</div>
+					<div class="stat-label">Happy Customers</div>
+				</div>
+				<div class="stat-box">
+					<div class="stat-number">50+</div>
+					<div class="stat-label">Cities Served</div>
+				</div>
+				<div class="stat-box">
+					<div class="stat-number">98%</div>
+					<div class="stat-label">Customer Satisfaction</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Our Values -->
+	<section style="background: var(--bg-light);">
+		<div class="container">
+			<div class="section-title">
+				<h2>Our Core Values</h2>
+				<p>The principles that guide everything we do</p>
+			</div>
+			<div class="row">
+				<div class="col-lg-4 col-md-6 mb-4">
+					<div class="value-card">
+						<div class="value-icon">
+							<i class="fa fa-shield"></i>
+						</div>
+						<h4>Safety First</h4>
+						<p>
+							Your safety is our top priority. All our vehicles undergo regular maintenance,
+							and our drivers are professionally trained and fully licensed.
+						</p>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 mb-4">
+					<div class="value-card">
+						<div class="value-icon">
+							<i class="fa fa-heart"></i>
+						</div>
+						<h4>Customer Care</h4>
+						<p>
+							We treat every passenger like family. From booking to drop-off, we ensure
+							your experience is comfortable, friendly, and stress-free.
+						</p>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 mb-4">
+					<div class="value-card">
+						<div class="value-icon">
+							<i class="fa fa-check-circle"></i>
+						</div>
+						<h4>Reliability</h4>
+						<p>
+							Count on us to be there when you need us. We pride ourselves on punctuality,
+							consistency, and dependable service you can trust.
+						</p>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 mb-4">
+					<div class="value-card">
+						<div class="value-icon">
+							<i class="fa fa-lightbulb-o"></i>
+						</div>
+						<h4>Innovation</h4>
+						<p>
+							We embrace technology to make booking easier, routes smarter, and your
+							experience better with modern solutions and online convenience.
+						</p>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 mb-4">
+					<div class="value-card">
+						<div class="value-icon">
+							<i class="fa fa-users"></i>
+						</div>
+						<h4>Community</h4>
+						<p>
+							We're proud to be part of the Fort McMurray community, supporting local
+							events, businesses, and the people who make our region strong.
+						</p>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 mb-4">
+					<div class="value-card">
+						<div class="value-icon">
+							<i class="fa fa-star"></i>
+						</div>
+						<h4>Excellence</h4>
+						<p>
+							We strive for excellence in every ride, maintaining high standards for
+							our vehicles, drivers, and customer service.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Location -->
+	<section>
+		<div class="container">
+			<div class="section-title">
+				<h2>Find Us</h2>
+				<p>Visit our office or contact us anytime - we're here to serve you 24/7</p>
+			</div>
+			<div class="row">
+				<div class="col-lg-6 mb-4 mb-lg-0">
+					<div class="location-card">
+						<h3><i class="fa fa-map-marker"></i> Our Location</h3>
+						<div class="location-details">
+							<p><i class="fa fa-map-marker"></i> 4957 STN MAIN<br>Fort McMurray, Alberta T9H 3G2</p>
+							<p><i class="fa fa-phone"></i> <a href="tel:+15876457951" style="color: var(--text-dark); text-decoration: none;">+1 587 645 7951</a></p>
+							<p><i class="fa fa-envelope"></i> <a href="mailto:arrowcab10@gmail.com" style="color: var(--text-dark); text-decoration: none;">arrowcab10@gmail.com</a></p>
+							<p><i class="fa fa-clock-o"></i> Available 24/7</p>
+						</div>
+						<a href="https://www.google.com/maps/place/4957+STN+MAIN,+Fort+McMurray,+Alberta,+T9H+3G2"
+						   target="_blank"
+						   class="btn-primary">
+							<i class="fa fa-map"></i> View on Google Maps
+						</a>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="map-container">
+						<iframe
+							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23195.352963406026!2d-111.38449771237477!3d56.72688277465026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x539fbd1baba3e5e5%3A0x7f7c8ad9eb81290d!2s4957%20STN%20MAIN%2C%20Fort%20McMurray%2C%20AB%20T9H%203G2!5e0!3m2!1sen!2sca!4v1700000000000!5m2!1sen!2sca"
+							width="100%"
+							height="450"
+							style="border:0;"
+							allowfullscreen=""
+							loading="lazy">
+						</iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Call to Action -->
+	<section class="home-calltoaction-area relative">
+		<div class="container">
+			<div class="overlay overlay-bg"></div>
+			<div class="row align-items-center section-gap">
+				<div class="col-lg-8">
+					<h1 class="text-white">Ready to Experience the Difference?</h1>
+					<p class="text-white" style="font-size: 18px;">
+						Book your ride today and discover why thousands of customers trust Arrow Cab
+						for their transportation needs across Alberta.
+					</p>
+				</div>
+				<div class="col-lg-4 btn-left">
+					<a href="index.html#home" class="btn-primary btn-lg" style="background: white; color: var(--primary-color);">
+						<i class="fa fa-calendar"></i> Book Now
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Footer -->
+	<footer class="footer-area section-gap">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-md-6 col-sm-6">
+					<div class="single-footer-widget">
+						<h6>Quick Links</h6>
+						<ul>
+							<li><a href="about.html">About Us</a></li>
+							<li><a href="service.html">Services</a></li>
+							<li><a href="gallery.html">Gallery</a></li>
+							<li><a href="contact.html">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 col-sm-6">
+					<div class="single-footer-widget">
+						<h6>Services</h6>
+						<ul>
+							<li><a href="#">Local Rides</a></li>
+							<li><a href="#">Long Distance</a></li>
+							<li><a href="#">Airport Transfer</a></li>
+							<li><a href="#">Corporate</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 col-sm-6">
+					<div class="single-footer-widget">
+						<h6>Contact Info</h6>
+						<p><strong>Phone:</strong> +1 587 645 7951</p>
+						<p><strong>Email:</strong> arrowcab10@gmail.com</p>
+						<p><strong>Location:</strong> Fort McMurray, AB</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 col-sm-6">
+					<div class="single-footer-widget">
+						<h6>Follow Us</h6>
+						<p>Stay connected on social media</p>
+						<div class="footer-social d-flex align-items-center">
+							<a href="#"><i class="fa fa-facebook"></i></a>
+							<a href="#"><i class="fa fa-twitter"></i></a>
+							<a href="#"><i class="fa fa-instagram"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<p class="mt-80 mx-auto footer-text col-lg-12 text-center">
+				Copyright &copy;<script>document.write(new Date().getFullYear());</script> Arrow Cab. All rights reserved.
+			</p>
+		</div>
+		<img class="footer-bottom" src="img/footer-bottom.png" alt="">
+	</footer>
+
+	<!-- Scripts -->
+	<script src="js/vendor/jquery-2.2.4.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="js/vendor/bootstrap.min.js"></script>
+	<script src="js/easing.min.js"></script>
+	<script src="js/hoverIntent.js"></script>
+	<script src="js/superfish.min.js"></script>
+	<script src="js/jquery.ajaxchimp.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script src="js/jquery.nice-select.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
