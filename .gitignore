@@ -19,3 +19,4 @@ desktop.ini
 
 # Keep only taxi-master files
 !.gitignore
+.claude/
